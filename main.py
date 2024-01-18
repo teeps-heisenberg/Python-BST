@@ -2,19 +2,33 @@ from binary_tree import BinarySearchTree
 
 my_tree = BinarySearchTree()
 
+my_tree.insert(47)
+
 my_tree.insert(21)
 
-my_tree.insert(16)
+my_tree.insert(76)
 
-my_tree.insert(42)
+my_tree.insert(18)
+my_tree.insert(27)
 
-print('Root: ',my_tree.root.value)
-print('Left: ',my_tree.root.left.value)
-print('Root: ',my_tree.root.right.value)
+my_tree.insert(52)
+my_tree.insert(89)
+
+# print('Root: ',my_tree.root.value)
+# print('Left: ',my_tree.root.left.value)
+# print('Root: ',my_tree.root.right.value)
 
 
-is_present = my_tree.contains(16)
-print('Is 16 present? ', is_present)
+#Recursive Search
+is_present = my_tree.r_contains(27)
+print('Is 27 present? ', is_present)
 
-is_present = my_tree.contains(18)
-print('Is 18 present? ', is_present)
+is_present = my_tree.r_contains(15)
+print('Is 15 present? ', is_present)
+print()
+
+my_tree.print_tree()
+
+print()
+my_tree.delete_node(76)
+my_tree.print_tree()
